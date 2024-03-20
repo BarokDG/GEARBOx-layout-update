@@ -2,7 +2,7 @@ import { Trial } from "../lib/types";
 
 export default function TrialCard({ name, title }: Trial) {
   return (
-    <div className="flex h-[251px] w-[421px] flex-col gap-[10px] bg-gray-200 p-5">
+    <div className="flex h-[251px] w-[421px] flex-col gap-2.5 bg-gray-200 p-5">
       <h1 className="text-lg font-bold">{name}</h1>
 
       <div>
