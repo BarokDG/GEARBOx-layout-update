@@ -1,5 +1,8 @@
 export interface Trial {
-  additionalInfo?: string;
+  additionalInfo?: {
+    title: string;
+    description: string;
+  };
   description: string;
   id: number;
   location: string;

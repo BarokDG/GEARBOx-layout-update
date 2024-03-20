@@ -8,10 +8,10 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <div className="flex h-screen flex-col">
       <NavBar />
       <Main />
-    </>
+    </div>
   );
 }
 

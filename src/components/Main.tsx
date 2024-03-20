@@ -1,11 +1,17 @@
+import { useState } from "react";
+
 import Accordion from "./Accordion";
 import Chip from "./Chip";
 import TrialCard from "./TrialCard";
+import TrialDetailsModal from "./TrialDetailsModal";
 import { data } from "../lib/data";
+import type { Trial } from "../lib/types";
 
 export default function Main() {
+  const [selectedTrial, setSelectedTrial] = useState<Trial | null>(null);
+
   return (
-    <main className="mt-6 px-6">
+    <main className="mt-6 flex-grow px-6">
       <div className="flex gap-5">
         <form className="flex w-[350px] flex-shrink-0 flex-col gap-5">
           <div className="flex justify-between">
@@ -51,6 +57,7 @@ export default function Main() {
           <Accordion title="Organ Function" />
           <Accordion title="Biomarkers" />
         </form>
+
         <div className="flex flex-col gap-2.5">
           <div className="flex gap-2.5">
             <Chip title="Matched" count={2} active />
@@ -60,11 +67,22 @@ export default function Main() {
 
           <div className="grid grid-cols-3 content-start items-center justify-items-start gap-2.5">
             {data.map((trial) => (
-              <TrialCard key={trial.id} {...trial} />
+              <TrialCard
+                key={trial.id}
+                {...trial}
+                onSelectTrial={() => setSelectedTrial(trial)}
+              />
             ))}
           </div>
         </div>
       </div>
+
+      {selectedTrial && (
+        <TrialDetailsModal
+          {...selectedTrial}
+          onCloseModal={() => setSelectedTrial(null)}
+        />
+      )}
     </main>
   );
 }
