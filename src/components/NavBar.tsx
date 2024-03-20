@@ -1,5 +1,5 @@
 import GEARBOxSVG from "../assets/logo.svg";
-import UserIcon from "./UserIcon";
+import UserIcon from "./icons/User";
 
 export default function NavBar() {
   return (

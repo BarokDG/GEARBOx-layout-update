@@ -3,10 +3,10 @@ import { Trial } from "../lib/types";
 export default function TrialCard({ name, title }: Trial) {
   return (
     <div className="flex h-[251px] w-[421px] flex-col gap-2.5 bg-gray-200 p-5">
-      <h1 className="text-lg font-bold">{name}</h1>
+      <h2 className="text-lg font-bold">{name}</h2>
 
       <div>
-        <h2 className="text-sm ">Title</h2>
+        <h3 className="text-sm ">Title</h3>
         <p>{title}</p>
       </div>
 
