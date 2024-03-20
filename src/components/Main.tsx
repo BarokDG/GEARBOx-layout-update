@@ -1,3 +1,12 @@
+import { data } from "../lib/data";
+import TrialCard from "./TrialCard";
+
 export default function Main() {
-  return <h1>Hello</h1>;
+  return (
+    <>
+      {data.map((trial) => (
+        <TrialCard key={trial.id} {...trial} />
+      ))}
+    </>
+  );
 }
