@@ -1,7 +1,7 @@
+import Accordion from "./Accordion";
 import Chip from "./Chip";
 import TrialCard from "./TrialCard";
 import { data } from "../lib/data";
-import Accordion from "./Accordion";
 
 export default function Main() {
   return (
