@@ -58,14 +58,14 @@ export default function Main() {
           <Accordion title="Biomarkers" />
         </form>
 
-        <div className="flex flex-col gap-2.5">
+        <div className="flex flex-grow flex-col gap-2.5">
           <div className="flex gap-2.5">
             <Chip title="Matched" count={2} active />
             <Chip title="Undetermined" count={8} />
             <Chip title="Unmatched" count={16} />
           </div>
 
-          <div className="grid grid-cols-3 content-start items-center justify-items-start gap-2.5">
+          <div className="grid grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))] place-content-center gap-2.5">
             {data.map((trial) => (
               <TrialCard
                 key={trial.id}
