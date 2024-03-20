@@ -8,7 +8,7 @@ export default function TrialCard({
 }: Trial & { onSelectTrial: () => void }) {
   return (
     <div
-      className="flex h-[251px] w-[421px] flex-col gap-2.5 bg-gray-200 p-5"
+      className="flex h-[251px] w-[421px] cursor-pointer flex-col gap-2.5 bg-gray-200 p-5"
       onClick={onSelectTrial}
     >
       <h2 className="text-lg font-bold">{name}</h2>

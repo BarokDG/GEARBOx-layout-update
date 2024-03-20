@@ -5,7 +5,7 @@ export interface Trial {
   };
   description: string;
   id: number;
-  location: string;
+  location?: string | string[];
   name: string;
   title: string;
   url: string;
